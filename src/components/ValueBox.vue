@@ -1,30 +1,39 @@
 <template>
     <div>
-        <b-container>
-            <b-row>
-                <b-col v-for="(i,index) in numberValues" :key="index" class="bcol">
-                    <input type="number" v-model="numberValues[index]" @input="changeInput(index)" :class="`color-${index+1}`">
-                    <span v-if="index < 3">.</span>
-                    <span v-if="index == 3">/</span>
-                </b-col>
-            </b-row>
-        </b-container>
+        <input type="number" v-model="numberValue" @input="changeNumber()" :class="className" min="0" max="12">
     </div>
 </template>
 
 <script>
 
 export default {
-    data(){
-        return{
-            numberValues:this.$store.state.decimalnumber,
-        }
-    },
+    props:['numberValue','className','min','max'],
     methods:{
-        changeInput(index){
-            this.$store.commit('changeNumber',index);
-            this.$store.commit('getValue');
-        },
+        changeNumber(){
+            let arr=this.numberValue.split("");
+            let index=0
+            for(let i=0;i<arr.length;i++){
+                if(arr[i]!=0){
+                    index=i;
+                    break;
+                }
+            }
+            arr.splice(0, index);
+            this.numberValue=arr.join("");
+
+            if(this.className=='fifth-color'){
+                if(this.numberValue >= 32){
+                    this.numberValue=32;
+                }
+            }else{
+                if(this.numberValue >= 255){
+                    this.numberValue=255;
+                }
+            }
+
+            this.numberValue=this.numberValue==null || this.numberValue=='' ? 0 : this.numberValue 
+            this.$emit("changeNumber",this.numberValue)
+        }
     }
 }
 </script>
@@ -36,13 +45,12 @@ input{
     font-size: 50px;
     font-weight: 900;
     padding: 10px 20px;
+    margin: 0px 20px;
     text-align: center;
     border: none;
     outline: none;
     color: #ffffff;
-    background: #aaa;
     border-radius: 10px;
-    box-shadow: 3px 3px 3px -1px rgba(10, 99, 169, 0.16), -3px -3px 3px -1px rgba(255, 255, 255, 0.70)
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -51,33 +59,5 @@ input::-webkit-inner-spin-button {
 }
 input[type=number] {
   -moz-appearance: textfield;
-}
-.color-1 {
-    background: #e600ee;
-}
-
-.color-2 {
-    background: #fd006a;
-}
-
-.color-3 {
-    background: #75c907;
-}
-
-.color-4 {
-    background: #a9ca03;
-}
-
-.color-5 {
-    background: #bbbbbb;
-}
-span{
-    margin-left: 25px;
-    font-size: 55px;
-    font-weight: 900;
-}
-.bcol{
-    display: flex;
-    flex-direction: row;
 }
 </style>

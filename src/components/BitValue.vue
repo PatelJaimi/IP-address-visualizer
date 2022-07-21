@@ -1,104 +1,53 @@
 <template>
     <div class="main">
-        <b-container>
-            <b-row>
-                <b-col v-for="(value,index) in bitValue" :key="index" class="outer" >
-                    <b-row>
-                        <b-col v-for="(i,j) in value" :key="j" class="inner" :class="[j < colorBox[index] ? `color-${index+1}` : 'color-5']"> 
-                            {{ i }}
-                        </b-col>
-                    </b-row>
-                </b-col>
-            </b-row>
-        </b-container>
+        <div v-for="(value,index) in bitValue" :key="index" class="ip-value">
+            <div :class="[index<colorBox ? className : 'fifth-color']">{{ value }}</div>
+        </div>
     </div>
 </template>
 
 <script>
 
 export default {
-    data(){
-        return{
-            numberValues:this.$store.state.decimalnumber,
-        }
-    },
-    computed:{
+    props:{
         bitValue:{
-            get(){
-                let arr =[]
-                this.numberValues.forEach(el => {
-                    arr.push(this.convertDecimalToBinary(el))
-                });
-                arr.pop();
-                return arr;
-            },
-            set(){}
+            require:true,
+            default:"00000000"
+        },
+        className:{
+            require:true,
+            default:"fifth-color"
         },
         colorBox:{
-            get(){
-                return this.$store.state.colorBox;
-            },
-            set(){}
+            require:true,
+            default:0
         }
     },
-    methods:{
-        convertDecimalToBinary(x){
-            let binary;
-            let bin = 0;
-            let rem;
-            let i = 1;
-            while (x != 0) {
-                rem = x % 2;
-                bin = bin + rem * i;
-                i = i * 10;
-                x = parseInt(x / 2);
-            }
-
-            binary = bin+"";
-            while (binary.length < 8){
-                binary = "0" + binary;
-            }
-           return(binary);
-        },
+    data(){
+        return{
+            
+        }
     }
 }
 </script>
 
 <style scoped>
 .main{
-    margin: 50px;
+    display: flex;
+    margin: 0px 20px;
 }
-.outer{
-    margin: 15px;
-    box-shadow: 10px 10px 10px -1px rgba(10, 99, 169, 0.3), -10px -10px 10px -1px rgba(255, 255, 255, 1);
+.ip-value{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
     text-align: center;
+    padding: 0;
 }
-.inner{
+.ip-value div{
     padding: 5px;
     font-size: 20px;
-    font-weight: 500;
-    color: #fff;
-    background: #aaa;
-    border: 1px solid #fff;
-
-}
-.color-1 {
-    background: #e600ee;
+    color: #ffffff;
+    margin: 0;
 }
 
-.color-2 {
-    background: #fd006a;
-}
-
-.color-3 {
-    background: #75c907;
-}
-
-.color-4 {
-    background: #a9ca03;
-}
-
-.color-5 {
-    background: #bbbbbb;
-}
 </style>

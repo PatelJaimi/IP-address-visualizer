@@ -17,17 +17,16 @@ export default {
     }
 }
 </script>
-
 <style scoped>
 .main{
     display: flex;
     flex-direction: column;
-    text-align: center;
-    padding: 20px;
-    margin-bottom: 20px;
+    width: 300px;
+    margin: 10px 20px;
     justify-content: center;
-    border-radius: 10px;
-    box-shadow: inset 3px 3px 3px -1px rgba(10, 99, 169, 0.16), inset -3px -3px 3px -1px rgba(255, 255, 255, 0.70)
+}
+span{
+    text-align: center;
 }
 .main .ip-name{
     text-transform: uppercase;

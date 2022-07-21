@@ -20,7 +20,6 @@ export default {
 <style scoped>
 .main{
     width: 100%;
-    height: 15vh;
     text-align: center;
     background: #BDBDBD;
     padding: 20px;
