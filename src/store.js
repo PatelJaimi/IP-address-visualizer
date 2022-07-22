@@ -47,8 +47,19 @@ export default new Vuex.Store({
                 state.colorBox = [8, 8, 8, state.decimalnumber[4] - 24];
             }
         },
-        changeNumber(state, i) {
-            let arr = state.decimalnumber[i].split("");
+        changeNumber(state, param) {
+            let e = param[0]
+            let i = param[1]
+
+            // Can't enter more than 255 or 32
+            if (e.data) {
+                if ((i < 4 && state.decimalnumber[i] > 255) || (i == 4 && state.decimalnumber[i] > 32)) {
+                    state.decimalnumber[i] = e.target._value
+                }
+            }
+
+            // Defualt set 0
+            let arr = state.decimalnumber[i].toString().split("");
 
             let index = 0
             for (let i = 0; i < arr.length; i++) {
@@ -60,16 +71,7 @@ export default new Vuex.Store({
             arr.splice(0, index);
             state.decimalnumber[i] = arr.join("");
 
-            if (i == 4) {
-                if (state.decimalnumber[i] >= 32) {
-                    state.decimalnumber[i] = 32; // "Value must be between 0 to 32"
-                }
-            } else {
-                if (state.decimalnumber[i] >= 255) {
-                    state.decimalnumber[i] = 255; // "Value must be between 0 to 255"
-                }
-            }
-
+            // Can't enter multipale 0
             let sum = arr.reduce(function(a, b) {
                 return parseInt(a) + parseInt(b);
             }, 0);
