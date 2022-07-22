@@ -1,4 +1,4 @@
-# ip-address-visualizer2
+# ip-address-visualizer
 
 ## Project setup
 ```
