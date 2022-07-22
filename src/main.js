@@ -1,19 +1,19 @@
 import Vue from 'vue'
 import App from './App.vue'
-import './assets/Css/style.css'
+import './assets/style/style.css'
 
+// Store (Vuex)
 import store from './store'
 
+// Bootstrap Vue
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
-
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 
+// Vue Numeric Input
 import VueNumericInput from 'vue-numeric-input';
-
 Vue.use(VueNumericInput)
 
 Vue.config.productionTip = false

@@ -1,17 +1,11 @@
 <template>
-    <div>
-        <b-container>
-            <b-row>
-                <b-col v-for="(i,index) in numberValues" :key="index" class="bcol">
-                    <!-- <vue-numeric-input  v-model="numberValues[index]" :min="0" :max="255" :controls='false' align="center"
-                        :class="`color-${index+1}`"
-                    ></vue-numeric-input> -->
-                    <input type="number" v-model="numberValues[index]" @input="changeInput(index)" :class="`color-${index+1}`">
-                    <span v-if="index < 3">.</span>
-                    <span v-if="index == 3">/</span>
-                </b-col>
-            </b-row>
-        </b-container>
+    <div class="value-box">
+        <b-row>
+            <b-col v-for="(i,index) in numberValues" :key="index" class="bcol">
+                <input type="number" v-model="numberValues[index]" @input="changeInput(index)" :class="`color-${index+1}`">
+                <span v-if="index < 3">.</span><span v-if="index == 3">/</span>
+            </b-col>
+        </b-row>
     </div>
 </template>
 
@@ -21,7 +15,6 @@ export default {
     data(){
         return{
             numberValues:this.$store.state.decimalnumber,
-            value:1
         }
     },
     methods:{
@@ -34,28 +27,6 @@ export default {
 </script>
 
 <style scoped>
-input{
-    width: 150px;
-    height: 70px;
-    font-size: 50px;
-    font-weight: 900;
-    padding: 10px 20px;
-    text-align: center;
-    border: none;
-    outline: none;
-    color: #ffffff;
-    background: #aaa;
-    border-radius: 10px;
-    box-shadow: 3px 3px 3px -1px rgba(10, 99, 169, 0.16), -3px -3px 3px -1px rgba(255, 255, 255, 0.70)
-}
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-input[type=number] {
-  -moz-appearance: textfield;
-}
 .color-1 {
     background: #e600ee;
 }
@@ -74,14 +45,5 @@ input[type=number] {
 
 .color-5 {
     background: #bbbbbb;
-}
-span{
-    margin-left: 25px;
-    font-size: 55px;
-    font-weight: 900;
-}
-.bcol{
-    display: flex;
-    flex-direction: row;
 }
 </style>

@@ -1,16 +1,14 @@
 <template>
-    <div class="main">
-        <b-container>
-            <b-row>
-                <b-col v-for="(value,index) in bitValue" :key="index" class="outer" >
-                    <b-row>
-                        <b-col v-for="(i,j) in value" :key="j" class="inner" :class="[j < colorBox[index] ? `color-${index+1}` : 'color-5']"> 
-                            {{ i }}
-                        </b-col>
-                    </b-row>
-                </b-col>
-            </b-row>
-        </b-container>
+    <div class="bit-value">
+        <b-row>
+            <b-col v-for="(value,index) in bitValue" :key="index" class="outer" >
+                <b-row>
+                    <b-col v-for="(i,j) in value" :key="j" class="inner" :class="[j < colorBox[index] ? `color-${index+1}` : 'color-5']"> 
+                        {{ i }}
+                    </b-col>
+                </b-row>
+            </b-col>
+        </b-row>
     </div>
 </template>
 
@@ -42,16 +40,21 @@ export default {
         }
     },
     methods:{
+        // Convert Decimal To Binary
         convertDecimalToBinary(x){
             let binary;
             let bin = 0;
             let rem;
             let i = 1;
+
+            // 5/2, Remainder = 1, Quotient = 2
+            // 2/2, Remainder = 0, Quotient = 1
+            // 1/2, Remainder = 1, Quotient = 0
             while (x != 0) {
-                rem = x % 2;
-                bin = bin + rem * i;
+                rem = x % 2;     // 7/2, Remainder = 1
+                bin = bin + rem * i;   
                 i = i * 10;
-                x = parseInt(x / 2);
+                x = parseInt(x / 2);  //  Quotient = 3
             }
 
             binary = bin+"";
@@ -63,42 +66,3 @@ export default {
     }
 }
 </script>
-
-<style scoped>
-.main{
-    margin: 50px;
-}
-.outer{
-    margin: 15px;
-    box-shadow: 10px 10px 10px -1px rgba(10, 99, 169, 0.3), -10px -10px 10px -1px rgba(255, 255, 255, 1);
-    text-align: center;
-}
-.inner{
-    padding: 5px;
-    font-size: 20px;
-    font-weight: 500;
-    color: #fff;
-    background: #aaa;
-    border: 1px solid #fff;
-
-}
-.color-1 {
-    background: #e600ee;
-}
-
-.color-2 {
-    background: #fd006a;
-}
-
-.color-3 {
-    background: #75c907;
-}
-
-.color-4 {
-    background: #a9ca03;
-}
-
-.color-5 {
-    background: #bbbbbb;
-}
-</style>

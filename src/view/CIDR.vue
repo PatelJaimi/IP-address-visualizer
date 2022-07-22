@@ -1,6 +1,6 @@
 <template>
     <div>
-        <cidr-info></cidr-info>
+        <about />
         <div>
             <value-box></value-box>
             <bit-value></bit-value>
@@ -13,20 +13,20 @@
                 </b-row>
             </b-container>
         </div>
-        <footer-compo></footer-compo>
+        <footer-compo />
     </div>
 </template>
 
 <script>
-import CidrInfo from '../components/CidrInfo.vue'
+import About from '../components/About.vue'
 import ValueBox from '../components/ValueBox.vue'
 import BitValue from '../components/BitValue.vue'
 import IpDetail from '../components/IpDetail.vue'
-import FooterCompo from '../components/FooterCompo.vue'
+import FooterCompo from '../components/Footer.vue'
 
 export default{
      components:{
-         CidrInfo,
+         About,
          ValueBox,
          BitValue,
          IpDetail,
@@ -46,6 +46,3 @@ export default{
     },
 }
 </script>
-
-<style scoped>
-</style>

@@ -1,5 +1,5 @@
 <template>
-    <div class="main">
+    <div class="about-main">
         <h1>CIDR</h1>
         <h4>An interactive IP address and CIDR range visualizer</h4>
         <div>
@@ -19,20 +19,3 @@ export default{
      
 }
 </script>
-
-<style scoped>
-.main{
-    width: 100%;
-    height: 30vh;
-    text-align: center;
-    padding: 25px;
-}
-.main h1{
-    font-weight: 900;
-}
-.main div{
-    width: 75%;
-    margin: 20px auto;
-    color: #585858;
-}
-</style>

@@ -1,8 +1,6 @@
 <template>
-    <div class="main">
-        <p>
-            * For routing mask values  &lt;= 30, first and last IPs are base and broadcast addresses and are unusable.
-        </p>
+    <div class="footer-main">
+        <p>* For routing mask values  &lt;= 30, first and last IPs are base and broadcast addresses and are unusable.</p>
         <p>
             Created by <a href="#"> Jaimi Patel</a>. Source available on 
             <a href="#"> Github </a> .
