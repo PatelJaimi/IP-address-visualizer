@@ -1,6 +1,6 @@
 <template>
     <div>
-        <cidr-info></cidr-info>
+        <about />
         <div class="ip">
             <value-box 
                 :className='"first-color"'
@@ -61,20 +61,20 @@
             <ip-detail :ipValue="lastUsableIPValue" :ipname="lastUsableIP"></ip-detail>
             <ip-detail :ipValue="countValue" :ipname="count"></ip-detail>
         </div>
-        <footer-compo></footer-compo>
+        <footer-compo />
     </div>
 </template>
 
 <script>
-import CidrInfo from '../components/CidrInfo.vue'
+import About from '../components/About.vue'
 import ValueBox from '../components/ValueBox.vue'
 import BitValue from '../components/BitValue.vue'
 import IpDetail from '../components/IpDetail.vue'
-import FooterCompo from '../components/FooterCompo.vue'
+import FooterCompo from '../components/Footer.vue'
 
 export default{
      components:{
-         CidrInfo,
+         About,
          ValueBox,
          BitValue,
          IpDetail,
