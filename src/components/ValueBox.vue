@@ -31,7 +31,11 @@ export default {
                 }
             }
 
-            this.numberValue=this.numberValue==null || this.numberValue=='' ? 0 : this.numberValue 
+            let sum = arr.reduce(function(a, b) {
+                return parseInt(a) + parseInt(b);
+            }, 0);
+
+            this.numberValue=this.numberValue==null || this.numberValue=='' || sum == 0  ? 0 : this.numberValue 
             this.$emit("changeNumber",this.numberValue)
         }
     }
