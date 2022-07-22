@@ -12,6 +12,10 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 
+import VueNumericInput from 'vue-numeric-input';
+
+Vue.use(VueNumericInput)
+
 Vue.config.productionTip = false
 
 new Vue({

@@ -3,6 +3,9 @@
         <b-container>
             <b-row>
                 <b-col v-for="(i,index) in numberValues" :key="index" class="bcol">
+                    <!-- <vue-numeric-input  v-model="numberValues[index]" :min="0" :max="255" :controls='false' align="center"
+                        :class="`color-${index+1}`"
+                    ></vue-numeric-input> -->
                     <input type="number" v-model="numberValues[index]" @input="changeInput(index)" :class="`color-${index+1}`">
                     <span v-if="index < 3">.</span>
                     <span v-if="index == 3">/</span>
@@ -18,6 +21,7 @@ export default {
     data(){
         return{
             numberValues:this.$store.state.decimalnumber,
+            value:1
         }
     },
     methods:{

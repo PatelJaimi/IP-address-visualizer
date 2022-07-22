@@ -49,6 +49,7 @@ export default new Vuex.Store({
         },
         changeNumber(state, i) {
             let arr = state.decimalnumber[i].split("");
+
             let index = 0
             for (let i = 0; i < arr.length; i++) {
                 if (arr[i] != 0) {
@@ -61,17 +62,19 @@ export default new Vuex.Store({
 
             if (i == 4) {
                 if (state.decimalnumber[i] >= 32) {
-                    state.decimalnumber[i] = 32;
-                    // "Value must be between 0 to 32"
+                    state.decimalnumber[i] = 32; // "Value must be between 0 to 32"
                 }
             } else {
                 if (state.decimalnumber[i] >= 255) {
-                    state.decimalnumber[i] = 255;
-                    // "Value must be between 0 to 255"
+                    state.decimalnumber[i] = 255; // "Value must be between 0 to 255"
                 }
             }
 
-            state.decimalnumber[i] = state.decimalnumber[i] == null || state.decimalnumber[i] == '' ? 0 : state.decimalnumber[i]
+            let sum = arr.reduce(function(a, b) {
+                return parseInt(a) + parseInt(b);
+            }, 0);
+
+            state.decimalnumber[i] = state.decimalnumber[i] == null || state.decimalnumber[i] == '' || sum == 0 ? 0 : state.decimalnumber[i]
         }
     }
 })
