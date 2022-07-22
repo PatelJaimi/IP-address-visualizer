@@ -71,19 +71,19 @@ export default new Vuex.Store({
             arr.splice(0, index);
             state.decimalnumber[i] = arr.join("");
 
-            // value between 0 to 255 ussing arow kwy
-            if (i == 4) {
-                if (state.decimalnumber[i] >= 32) {
-                    state.decimalnumber[i] = 32;
-                }
-            } else {
-                if (state.decimalnumber[i] >= 255) {
-                    state.decimalnumber[i] = 255;
-                }
-            }
-            if (state.decimalnumber[i] < 0) {
-                state.decimalnumber[i] = 0;
-            }
+            // // value between 0 to 255 ussing arow kwy
+            // if (i == 4) {
+            //     if (state.decimalnumber[i] >= 32) {
+            //         state.decimalnumber[i] = 32;
+            //     }
+            // } else {
+            //     if (state.decimalnumber[i] >= 255) {
+            //         state.decimalnumber[i] = 255;
+            //     }
+            // }
+            // if (state.decimalnumber[i] < 0) {
+            //     state.decimalnumber[i] = 0;
+            // }
 
             // Can't enter multipale 0
             let sum = arr.reduce(function(a, b) {
