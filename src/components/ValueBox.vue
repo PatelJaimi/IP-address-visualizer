@@ -30,7 +30,7 @@ export default {
 
 <style scoped>
 .color-1 {
-    background: #e600ee;
+    background: #873cff;
 }
 
 .color-2 {
