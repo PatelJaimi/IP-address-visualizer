@@ -30,19 +30,19 @@ export default {
 
 <style scoped>
 .color-1 {
-    background: #873cff;
+    background: #b384ff;
 }
 
 .color-2 {
-    background: #fd006a;
+    background: #ff7fb4;
 }
 
 .color-3 {
-    background: #75c907;
+    background: #7a87ff;
 }
 
 .color-4 {
-    background: #a9ca03;
+    background: #10db7d;
 }
 
 .color-5 {

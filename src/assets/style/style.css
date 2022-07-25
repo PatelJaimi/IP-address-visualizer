@@ -19,22 +19,27 @@
 
 .about-main {
     width: 100%;
+    margin-bottom: 50px;
     text-align: center;
-    padding: 30px;
 }
 
 .about-main h1 {
     font-weight: 900;
+    padding: 20px;
+    background: #eeeeee;
+    color: #fd006a;
+    margin-bottom: 20px;
 }
 
 .about-main h4 {
-    color: #425263;
+    color: #8a0d41;
 }
 
 .about-main div {
-    width: 75%;
+    width: 80%;
     margin: 20px auto;
     color: #585858;
+    text-align: justify;
 }
 
 
@@ -61,23 +66,23 @@
 
 .value-box input {
     width: 150px;
-    height: 70px;
     font-size: 50px;
     font-weight: 900;
-    padding: 10px 20px;
+    padding: 5px 20px;
     text-align: center;
     border: none;
     outline: none;
     color: #ffffff;
     background: #aaa;
     border-radius: 10px;
-    box-shadow: 3px 3px 3px -1px rgba(10, 99, 169, 0.16), -3px -3px 3px -1px rgba(255, 255, 255, 0.70)
+    box-shadow: 5px 5px 5px -1px rgba(10, 99, 169, 0.16), -5px -5px 5px -1px rgba(255, 255, 255, 0.70)
 }
 
 .value-box span {
     margin-left: 25px;
     font-size: 50px;
     font-weight: 900;
+    color: #424242;
 }
 
 .value-box .bcol {
@@ -145,19 +150,19 @@ input[type=number] {
 /* color change according to divider value */
 
 .color-1 {
-    background: #873cff;
+    background: #b384ff;
 }
 
 .color-2 {
-    background: #fd006a;
+    background: #ff7fb4;
 }
 
 .color-3 {
-    background: #75c907;
+    background: #7a87ff;
 }
 
 .color-4 {
-    background: #a9ca03;
+    background: #10db7d;
 }
 
 .color-5 {
