@@ -13,6 +13,7 @@
                 </b-row>
             </b-container>
         </div>
+        <p class="note">* For routing mask values  &lt;= 30, first and last IPs are base and broadcast addresses and are unusable.</p>
         <footer-compo />
     </div>
 </template>

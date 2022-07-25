@@ -5,6 +5,15 @@
 }
 
 
+/* CIDR */
+
+.note {
+    text-align: center;
+    margin: 20px;
+    color: #ff0000;
+}
+
+
 /* about */
 
 .about-main {
@@ -32,10 +41,9 @@
 
 .footer-main {
     width: 100%;
-    height: 15vh;
     text-align: center;
     background: #BDBDBD;
-    padding: 20px;
+    padding: 25px;
     position: fixed;
     bottom: 0;
     font-weight: 500;
@@ -136,7 +144,7 @@ input[type=number] {
 /* color change according to divider value */
 
 .color-1 {
-    background: #e600ee;
+    background: #873cff;
 }
 
 .color-2 {
