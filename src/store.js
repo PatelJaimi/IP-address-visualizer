@@ -11,8 +11,52 @@ export default new Vuex.Store({
         lastUsableIPValue: null,
         countValue: null,
         colorBox: [],
+        subnetDetails: [],
     },
     mutations: {
+        // Clear table all data
+        clearDetails(state) {
+            state.subnetDetails = [];
+        },
+        // Add date in table
+        addDetail(state) {
+            let match = false;
+
+            const textForCopy = state.decimalnumber.join(".");
+            const lastIndex = textForCopy.lastIndexOf('.');
+            const replacement = '/';
+            const finalText = textForCopy.substring(0, lastIndex) + replacement + textForCopy.substring(lastIndex + 1);
+
+            let obj = {
+                subnet: finalText,
+                firstIP: state.firstUsableIPValue,
+                lastIP: state.lastUsableIPValue,
+                count: state.countValue,
+            };
+
+            // check for duplicate values 
+            for (let i = 0; i < state.subnetDetails.length; i++) {
+                if (state.subnetDetails[i].subnet == obj.subnet) {
+                    if (state.subnetDetails[i].firstIP == obj.firstIP) {
+                        if (state.subnetDetails[i].firstIP == obj.firstIP) {
+                            if (state.subnetDetails[i].firstIP == obj.firstIP) {
+                                match = true
+                            }
+                        }
+                    }
+                }
+            }
+            if (match == false) {
+                state.subnetDetails.unshift(obj);
+            }
+        },
+        // Copy the TP
+        copyText(state, id) {
+            var textValue = document.getElementById(id);
+            textValue.select();
+            textValue.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(textValue.value);
+        },
         increment(state) {
             state.count++
         },
@@ -70,20 +114,6 @@ export default new Vuex.Store({
             }
             arr.splice(0, index);
             state.decimalnumber[i] = arr.join("");
-
-            // // value between 0 to 255 ussing arow kwy
-            // if (i == 4) {
-            //     if (state.decimalnumber[i] >= 32) {
-            //         state.decimalnumber[i] = 32;
-            //     }
-            // } else {
-            //     if (state.decimalnumber[i] >= 255) {
-            //         state.decimalnumber[i] = 255;
-            //     }
-            // }
-            // if (state.decimalnumber[i] < 0) {
-            //     state.decimalnumber[i] = 0;
-            // }
 
             // Can't enter multipale 0
             let sum = arr.reduce(function(a, b) {

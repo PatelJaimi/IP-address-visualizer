@@ -8,7 +8,7 @@
                     <div class="idspc">
                         <p class="mb-4">Enter IP address. In the latter case, the provided prefix length overrides the Subnet mask value.</p>
                         <value-box></value-box>
-                        <div class="list-unstyled m-0 row">
+                        <div>
                             <ip-detail :ipValue="this.$store.state.netmaskValue" :ipname="netmask"></ip-detail>
                             <ip-detail :ipValue="this.$store.state.firstUsableIPValue" :ipname="firstUsableIP"></ip-detail>
                             <ip-detail :ipValue="this.$store.state.lastUsableIPValue" :ipname="lastUsableIP"></ip-detail>
@@ -16,12 +16,13 @@
                         </div>   
                     </div>
                     <div class="addTablebtn">
-                        <a href="#">Add to table</a>
+                        <button @click="addData()">Add to table</button>
                     </div>
                 </div>                
             </div>
         </div>
         </div>
+        <detail-table />
         <footer-compo />
     </div>
 </template>
@@ -30,6 +31,7 @@
 import About from '../components/About.vue'
 import ValueBox from '../components/ValueBox.vue'
 import IpDetail from '../components/IpDetail.vue'
+import DetailTable from '../components/DetailTable.vue'
 import FooterCompo from '../components/Footer.vue'
 
 export default{
@@ -37,6 +39,7 @@ export default{
          About,
          ValueBox,
          IpDetail,
+         DetailTable,
          FooterCompo,
      },
      data(){
@@ -50,6 +53,12 @@ export default{
     },
     created(){
         this.$store.commit('getValue');
+        this.$store.commit('addDetail');
     },
+    methods:{
+        addData(){
+            this.$store.commit('addDetail');           
+        }
+    }
 }
 </script>
