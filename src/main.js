@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import './assets/style/style.css'
+import './assets/style/media.css';
 
 // Store (Vuex)
 import store from './store'

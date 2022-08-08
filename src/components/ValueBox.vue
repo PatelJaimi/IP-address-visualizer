@@ -1,12 +1,21 @@
 <template>
-    <div class="value-box">
-        <b-row>
-            <b-col v-for="(i,index) in numberValues" :key="index" class="bcol">
-                <input type="number" v-model="numberValues[index]" @input="changeInput($event,index)" :class="`color-${index+1}`" min='0'
-                :max="index==4 ? '32' : '255'" >
-                <span v-if="index < 3">.</span><span v-if="index == 3">/</span>
-            </b-col>
-        </b-row>
+    <div>
+        <div class="idDetails d-sm-flex d-block justify-content-center align-items-center">
+            <ul class="list-unstyled m-0">
+                <li v-for="(i,index) in numberValues" :key="index">
+                    <input type="number" v-model="numberValues[index]" @input="changeInput($event,index)" :class="`color-${index+1}`" min='0'
+                        :max="index==4 ? '32' : '255'" >
+                    <span v-if="index < 3">.</span><span v-if="index == 3">/</span>
+                </li>
+            </ul>
+            <div class="copyIcon">
+                <span class="d-sm-none d-inline-block">copy</span>
+                <div class="copyimg">
+                    <img src="../assets/img/copy.png" alt="copy" class="d-sm-inline-block d-none" />
+                    <img src="../assets/img/copy-mobile.png" class="d-sm-none d-inline-block" alt="copy" />
+                </div>                                
+            </div>
+        </div>
     </div>
 </template>
 
@@ -27,25 +36,3 @@ export default {
     }
 }
 </script>
-
-<style scoped>
-.color-1 {
-    background: #873cff;
-}
-
-.color-2 {
-    background: #fd006a;
-}
-
-.color-3 {
-    background: #75c907;
-}
-
-.color-4 {
-    background: #a9ca03;
-}
-
-.color-5 {
-    background: #bbbbbb;
-}
-</style>

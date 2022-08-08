@@ -1,0 +1,412 @@
+@media (max-width:1400px) {
+    .headerInfo {
+        padding: 10px 0 30px 0;
+    }
+    .tbldetails {
+        margin: 30px 0 40px 0;
+    }
+    .logo h1 {
+        font-size: 72px;
+        line-height: 90px;
+    }
+    .hdrTxt p {
+        font-size: 26px;
+    }
+    .idDetails ul li {
+        margin: 0 40px 0 0;
+        font-size: 36px;
+        width: 140px;
+        height: 67px;
+    }
+    .idDetails ul li::after {
+        right: -26px;
+    }
+    .idDetails ul li:nth-child(4)::after {
+        width: 68.13px;
+        right: -56px;
+    }
+    .cidrTxt {
+        padding: 0;
+    }
+}
+
+@media (max-width:1300px) {}
+
+@media (max-width:1200px) {
+    .container {
+        max-width: 100% !important;
+        padding: 0 20px !important;
+    }
+    .logo h1 {
+        font-size: 62px;
+        line-height: 70px;
+    }
+    .hdrTxt p {
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .idspc {
+        padding: 40px 40px;
+    }
+    .idDetails ul li {
+        margin: 0 38px 0 0;
+        font-size: 32px;
+        width: 125px;
+        height: 60px;
+    }
+    .idDetails ul li::after {
+        right: -25px;
+    }
+    .idDetails ul li:nth-child(4)::after {
+        width: 55px;
+        right: -48px;
+        border: 2px solid #2F2B43;
+        top: 28px;
+    }
+}
+
+@media (max-width:991px) {
+    .headerInfo {
+        padding: 0 0 20px 0;
+    }
+    .logo h1 {
+        font-size: 52px;
+        line-height: 60px;
+    }
+    .hdrTxt p {
+        font-size: 20px;
+        line-height: normal;
+    }
+    .label {
+        padding: 5px;
+        width: 45px;
+        height: 22px;
+    }
+    .ball {
+        top: 5px;
+    }
+    .ball::after {
+        Width: 10px;
+        Height: 10px;
+        background-size: 10px !important;
+        padding: 6px;
+    }
+    .cidrTxt {
+        padding: 0;
+    }
+    .togleInfo {
+        top: 20px;
+    }
+    .idspc {
+        padding: 40px 20px;
+    }
+    .idDetails ul li {
+        margin: 0 30px 0 0;
+        font-size: 28px;
+        width: 96px;
+        height: 55px;
+    }
+    .copyIcon {
+        margin: 0 0 0 15px;
+    }
+    .idList ul li p,
+    .idList ul li span {
+        font-size: 18px;
+    }
+    .idDetails ul li:nth-child(4)::after {
+        width: 50px;
+        right: -41px;
+    }
+    .idDetails ul li::after {
+        right: -22px;
+    }
+    .tblTitle h2 {
+        font-size: 28px;
+    }
+    .tblTitle a {
+        font-size: 18px;
+        line-height: normal;
+    }
+    .tblTitle {
+        padding: 20px 25px;
+    }
+    .tblnfo th,
+    .tblnfo td {
+        font-size: 16px;
+    }
+    .tblnfo td:first-child {
+        padding-left: 40px;
+    }
+    .tblnfo th:first-child {
+        padding-left: 25px;
+    }
+    .tbldetails {
+        margin: 30px 0 40px 0;
+    }
+    .copyTxt {
+        width: 45%;
+        text-align: center;
+    }
+    .ftrSocial {
+        width: 55%;
+        text-align: center;
+    }
+    .ftrSocial span {
+        display: block;
+        margin: 0 0 20px 0;
+    }
+    .ftrDetails {
+        padding: 20px 0;
+    }
+    .ftrSocial ul {
+        padding: 0;
+    }
+}
+
+@media (max-width:767px) {
+    .headerInfo {
+        padding: 30px 0 10px 0;
+    }
+    .logo h1 {
+        font-size: 45px;
+        line-height: normal;
+    }
+    .hdrTxt p {
+        font-size: 18px;
+    }
+    .idDetails ul li {
+        margin: 0 20px 0 0;
+        font-size: 26px;
+        width: 80px;
+        height: 48px;
+    }
+    .idDetails ul li::after {
+        width: 6px;
+        right: -15px;
+        height: 6px;
+    }
+    .idDetails ul li:nth-child(4)::after {
+        width: 44px;
+        right: -34px;
+        top: 25px;
+        height: 0;
+        border-width: 1px;
+    }
+    .idspc {
+        padding: 40px 0 0 0;
+    }
+    .idInfo p,
+    .idDetails {
+        padding: 0 15px;
+    }
+    .idList {
+        margin: 30px 0 0 0;
+        border-top: 0.5px solid #9993B3;
+        padding: 30px 15px;
+    }
+    .addTablebtn {
+        border: none;
+    }
+    .addTablebtn a {
+        margin: 0 0 30px 0;
+    }
+    .addTablebtn a {
+        padding: 10px 25px;
+        font-size: 18px;
+    }
+    .tblnfo {
+        padding: 0 15px;
+        overflow-y: auto;
+        max-height: 496px;
+    }
+    .tblnfo th {
+        display: none;
+    }
+    .tblnfo td {
+        display: block;
+        padding: 0 15px;
+        width: 100%;
+        position: relative;
+        padding-left: 40% !important;
+    }
+    .tblnfo td::before {
+        content: 'Sr No:';
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 45%;
+        padding-right: 10px;
+        color: #9993B3;
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: 0.05em;
+        text-align: left;
+    }
+    .tblnfo td:nth-child(2):before {
+        content: 'Subnet Address';
+    }
+    .tblnfo td:nth-child(3):before {
+        content: 'Host Address Range ';
+    }
+    .tblnfo td:last-child:before {
+        content: 'Net mask';
+    }
+    .tblnfo td:last-child {
+        border-bottom: 1px solid #413E53;
+    }
+    .tblnfo tr {
+        border: none;
+    }
+    .tbldetails {
+        margin: 25px 0;
+    }
+    .tbldetails tr.lstdt td,
+    body.dark .tblnfo tr {
+        border: none;
+    }
+    .ftrSocial ul li {
+        margin: 0 5px 0 0;
+    }
+}
+
+@media (max-width:640px) {
+    .togleInfo {
+        top: 0;
+        right: 20px;
+    }
+    .idInfo p {
+        font-size: 18px;
+    }
+    .idDetails ul li {
+        margin: 0 15px 0 0;
+        font-size: 24px;
+        width: 73px;
+        height: 45px;
+    }
+    .idDetails ul li::after {
+        right: -13px;
+    }
+    .idDetails ul li:nth-child(4)::after {
+        right: -31px;
+    }
+    .idDetails ul li {
+        width: 65px;
+    }
+    .tblnfo td {
+        padding-left: 50% !important;
+    }
+    .tblTitle h2 {
+        font-size: 24px;
+    }
+    .copyTxt a,
+    .ftrSocial span {
+        font-size: 18px;
+    }
+    .ftrSocial ul li {
+        margin: 0 2px 0 0;
+    }
+    .ftrSocial ul li a {
+        height: 28px;
+        width: 28px;
+    }
+}
+
+@media (max-width:575px) {
+    .copyIcon {
+        display: inline-block;
+        border: 2px solid #1CB7F6;
+        padding: 8px 14px;
+        line-height: normal;
+        margin: 30px 0 0 0;
+        text-align: center;
+        background: transparent;
+        box-shadow: none;
+        border-radius: 50px;
+        width: auto;
+        height: auto;
+    }
+    .copyimg {
+        display: inline-block;
+    }
+    .copyIcon span {
+        font-weight: 700;
+        color: #19A3F4;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        font-size: 16px;
+    }
+    .idInfo p {
+        text-align: left;
+    }
+    .idList ul li p,
+    .idList ul li span {
+        text-align: center;
+        font-size: 18px;
+    }
+}
+
+@media (max-width:480px) {
+    .container {
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+    }
+    .togleInfo {
+        right: 10px;
+    }
+    .label {
+        width: 40px;
+        height: 22px;
+    }
+    .logo h1 {
+        font-size: 40px;
+    }
+    .headerInfo {
+        padding: 20px 0;
+    }
+    body.dark .ball::after {
+        right: -6px;
+    }
+    .idDetails ul li {
+        margin: 0 6px 0 0;
+        font-size: 16px;
+        height: 28px;
+        width: 44px;
+    }
+    .idDetails ul li::after {
+        right: -10px;
+        width: 4px;
+        height: 4px;
+    }
+    .idDetails ul li:nth-child(4)::after {
+        right: -16px;
+        width: 23px;
+        top: 14px;
+    }
+    .idList ul li p,
+    .idList ul li span {
+        font-size: 14px;
+        padding: 0;
+    }
+    .copyIcon span {
+        font-size: 16px;
+    }
+    .tblnfo td {
+        padding-left: 45% !important;
+        line-height: normal;
+    }
+    .tblTitle h2 {
+        font-size: 18px;
+    }
+    .tblTitle a {
+        padding: 8px 10px;
+    }
+    .tblnfo th,
+    .tblnfo td,
+    .tblTitle a {
+        font-size: 14px;
+    }
+    .addTablebtn a {
+        padding: 8px 15px;
+        font-size: 16px;
+    }
+}

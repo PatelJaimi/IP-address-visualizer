@@ -1,7 +1,11 @@
 <template>
-    <div class="ip-detail">
-        <span class="ip-value">{{ ipValue }}</span>
-        <span class="ip-name">{{ ipname }}</span>
+    <div>
+        <div class="idList">
+            <div class="col-md-3 col-6 p-0">
+                <p>{{ ipValue }}</p>
+                <span>{{ ipname }}</span>
+            </div>                       
+        </div>
     </div>
 </template>
 
