@@ -16,13 +16,13 @@
                         </div>   
                     </div>
                     <div class="addTablebtn">
-                        <button>Add to table</button>
-                        <!-- <a href="#">Add to table</a> -->
+                        <button @click="addData()">Add to table</button>
                     </div>
                 </div>                
             </div>
         </div>
         </div>
+        <detail-table />
         <footer-compo />
     </div>
 </template>
@@ -31,6 +31,7 @@
 import About from '../components/About.vue'
 import ValueBox from '../components/ValueBox.vue'
 import IpDetail from '../components/IpDetail.vue'
+import DetailTable from '../components/DetailTable.vue'
 import FooterCompo from '../components/Footer.vue'
 
 export default{
@@ -38,6 +39,7 @@ export default{
          About,
          ValueBox,
          IpDetail,
+         DetailTable,
          FooterCompo,
      },
      data(){
@@ -51,6 +53,12 @@ export default{
     },
     created(){
         this.$store.commit('getValue');
+        this.$store.commit('addDetail');
     },
+    methods:{
+        addData(){
+            this.$store.commit('addDetail');           
+        }
+    }
 }
 </script>

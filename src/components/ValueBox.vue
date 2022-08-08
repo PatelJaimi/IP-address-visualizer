@@ -10,11 +10,12 @@
             </ul>
             <div class="copyIcon">
                 <span class="d-sm-none d-inline-block">copy</span>
-                <div class="copyimg">
+                <div class="copyimg" @click="copyIp()">
                     <img src="../assets/img/copy.png" alt="copy" class="d-sm-inline-block d-none" />
                     <img src="../assets/img/copy-mobile.png" class="d-sm-none d-inline-block" alt="copy" />
                 </div>                                
             </div>
+            <input v-show="false" type="text" :value="copiedValue" id="myInput">
         </div>
     </div>
 </template>
@@ -27,11 +28,26 @@ export default {
             numberValues:this.$store.state.decimalnumber,
         }
     },
+    computed:{
+        copiedValue:{
+            get(){
+                const textForCopy = this.numberValues.join(".");
+                const lastIndex = textForCopy.lastIndexOf('.');
+                const replacement = '/';
+                const finalText =textForCopy.substring(0, lastIndex) +replacement +textForCopy.substring(lastIndex + 1);
+                return finalText
+            },
+            set(){}
+        }
+    },
     methods:{
         changeInput(e,index){
             let param = [e,index]
             this.$store.commit('changeNumber',param);
             this.$store.commit('getValue');
+        },
+        copyIp(){
+            this.$store.commit('copyText',"myInput");           
         },
     }
 }
