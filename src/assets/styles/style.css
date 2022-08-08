@@ -1,4 +1,3 @@
-
 @import url('//fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 h1,
 h2,
@@ -13,9 +12,12 @@ body {
     font-family: 'Inter', sans-serif;
     transition: background 0.2s linear;
     background-color: #EAECF5 !important;
-    font-size: 16px;  
-    font-weight: normal; color: #000; line-height: normal;
+    font-size: 16px;
+    font-weight: normal;
+    color: #000;
+    line-height: normal;
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -25,6 +27,7 @@ input::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance: textfield;
 }
+
 .headerInfo {
     padding: 30px 0 70px 0;
 }
@@ -50,13 +53,15 @@ input[type=number] {
 .cidrTxt {
     padding: 40px 0 0 0;
 }
-.cidrTxt a{
+
+.cidrTxt a {
     display: inline-block;
     color: #9993B3;
     transition: 1s;
     text-decoration: none;
 }
-.cidrTxt a:hover{
+
+.cidrTxt a:hover {
     color: #19A8F5;
     transition: 1s;
 }
@@ -66,7 +71,6 @@ input[type=number] {
     line-height: 159.49%;
     letter-spacing: 0.05em;
     color: #9993B3;
-
 }
 
 body.dark {
@@ -120,7 +124,7 @@ body.dark .label {
 
 .ball::after {
     content: '';
-    background: url(../img/lighmode.png) center no-repeat;    
+    background: url(../img/lighmode.png) center no-repeat;
     Width: 15.72px;
     Height: 15.67px;
     background-size: 15px;
@@ -165,13 +169,15 @@ body.dark .idInfo {
 .idDetails ul li {
     display: inline-block;
     vertical-align: top;
-    margin: 0 60px 0 0;    
+    margin: 0 60px 0 0;
     position: relative;
 }
+
 .idDetails ul li:last-child {
     margin: 0;
 }
-.idDetails ul li input{
+
+.idDetails ul li input {
     border: none;
     line-height: normal;
     width: 160px;
@@ -185,28 +191,46 @@ body.dark .idInfo {
     text-align: center;
     outline: none;
 }
-.idDetails ul li input.color-2{background: #28B95E;}
-.idDetails ul li input.color-3{background: #F0783C;}
-.idDetails ul li input.color-4{background: #F04B69;}
-.idDetails ul li input.color-5{background: #FFBEBE;color: #2F2B43;}
-.idDetails ul li span{
+
+.idDetails ul li input.color-2 {
+    background: #28B95E;
+}
+
+.idDetails ul li input.color-3 {
+    background: #F0783C;
+}
+
+.idDetails ul li input.color-4 {
+    background: #F04B69;
+}
+
+.idDetails ul li input.color-5 {
+    background: #FFBEBE;
+    color: #2F2B43;
+}
+
+.idDetails ul li span {
     font-size: 70px;
     line-height: 55px;
     position: absolute;
     bottom: 0px;
-    right: -38px;    
+    right: -38px;
 }
-.idDetails ul li:nth-child(4) span{
+
+.idDetails ul li:nth-child(4) span {
     bottom: 15px;
     right: -44px;
 }
-.idDetails ul li input::focus{
+
+.idDetails ul li input::focus {
     border: none;
     outline: none;
 }
-body.dark .idDetails ul li span{
+
+body.dark .idDetails ul li span {
     color: #fff;
 }
+
 .idspc {
     padding: 40px 75px;
 }
@@ -222,11 +246,11 @@ body.dark .idDetails ul li span{
     cursor: pointer;
 }
 
-
 .listidInfo {
     margin: 50px 0 0 0;
 }
-.idList{
+
+.idList {
     display: inline-block;
     vertical-align: top;
     width: 25%;
@@ -237,7 +261,6 @@ body.dark .idDetails ul li span{
     font-weight: 700;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-  
     margin: 0;
     color: #2F2B43;
 }
@@ -254,7 +277,7 @@ body.dark .idList p {
     color: #9993B3;
 }
 
-body.dark .idList span {    
+body.dark .idList span {
     color: #9993B3;
 }
 
@@ -331,7 +354,8 @@ body.dark .tblTitle h2 {
     text-transform: uppercase;
     text-decoration: none;
     padding: 12px 16px;
-    border-radius: 10px;background-color: transparent;
+    border-radius: 10px;
+    background-color: transparent;
 }
 
 .tblTitle button:hover {
@@ -404,11 +428,14 @@ body.dark .tblnfo tr:hover {
 }
 
 .tblnfo td img {
-    margin-left: 10px;cursor: pointer;
+    margin-left: 10px;
+    cursor: pointer;
 }
-.nodata td{ 
-    font-size: 22px;color: #2F2B43;
-    font-weight: 600;
+
+.nodata td {
+    font-size: 22px;
+    color: #2F2B43;
+    font-weight: 500;
     text-align: center;
     padding: 30px 0 !important;
 }

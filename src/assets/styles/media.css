@@ -15,7 +15,7 @@
     .idDetails ul li {
         margin: 0 55px 0 0;
     }
-    .idDetails ul li input{    
+    .idDetails ul li input {
         font-size: 36px;
         width: 140px;
         height: 67px;
@@ -36,9 +36,7 @@
     }
 }
 
-@media (max-width:1300px) {
-
-}
+@media (max-width:1300px) {}
 
 @media (max-width:1200px) {
     .container {
@@ -57,9 +55,9 @@
         padding: 40px 40px;
     }
     .idDetails ul li {
-        margin: 0 40px 0 0;        
+        margin: 0 40px 0 0;
     }
-    .idDetails ul li input{
+    .idDetails ul li input {
         font-size: 32px;
         width: 125px;
         height: 60px;
@@ -110,9 +108,9 @@
         padding: 40px 20px;
     }
     .idDetails ul li {
-        margin: 0 36px 0 0;       
+        margin: 0 36px 0 0;
     }
-    .idDetails ul li input{
+    .idDetails ul li input {
         font-size: 28px;
         width: 96px;
         height: 55px;
@@ -124,18 +122,22 @@
         width: 50%;
         margin: 0 0 30px 0;
     }
-    .idList:nth-child(3),.idList:last-child {margin: 0;}
+    .idList:nth-child(3),
+    .idList:last-child {
+        margin: 0;
+    }
     .idList p,
     .idList span {
         font-size: 18px;
     }
     .idDetails ul li:nth-child(4) span {
-        right: -30px;   
+        right: -30px;
         bottom: 8px;
     }
     .idDetails ul li span {
         right: -25px;
-        font-size: 50px;    line-height: 42px;
+        font-size: 50px;
+        line-height: 42px;
     }
     .tblTitle h2 {
         font-size: 28px;
@@ -192,7 +194,7 @@
         font-size: 18px;
     }
     .idDetails ul li {
-        margin: 0 28px 0 0;      
+        margin: 0 28px 0 0;
     }
     .idDetails ul li input {
         font-size: 26px;
@@ -228,7 +230,6 @@
         padding: 10px 25px;
         font-size: 18px;
     }
-   
     .tblnfo {
         padding: 0 15px;
         overflow-y: auto;
@@ -278,7 +279,7 @@
     .tblnfo table {
         margin: 0 0 20px 0;
     }
-    .tbldetails tr.lstdt td,{
+    .tbldetails tr.lstdt td {
         border: none;
     }
     .ftrSocial ul li {
@@ -296,9 +297,8 @@
     }
     .idDetails ul li {
         margin: 0 20px 0 0;
-       
     }
-    .idDetails ul li input{
+    .idDetails ul li input {
         font-size: 24px;
         width: 65px;
         height: 44px;
@@ -386,9 +386,9 @@
         right: -6px;
     }
     .idDetails ul li {
-        margin: 0 15px 0 0;        
+        margin: 0 15px 0 0;
     }
-    .idDetails ul li input{
+    .idDetails ul li input {
         font-size: 16px;
         height: 28px;
         width: 40px;
@@ -433,6 +433,8 @@
     .tblnfo td img {
         margin-left: 5px;
     }
-    .copyTxt a, .ftrSocial span {
-        font-size: 16px;}
+    .copyTxt a,
+    .ftrSocial span {
+        font-size: 16px;
+    }
 }
