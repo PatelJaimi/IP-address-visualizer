@@ -8,7 +8,7 @@
                     <div class="idspc">
                         <p class="mb-4">Enter IP address. In the latter case, the provided prefix length overrides the Subnet mask value.</p>
                         <value-box></value-box>
-                        <div class="list-unstyled m-0 row">
+                        <div class="listidInfo">
                             <ip-detail :ipValue="this.$store.state.netmaskValue" :ipname="netmask"></ip-detail>
                             <ip-detail :ipValue="this.$store.state.firstUsableIPValue" :ipname="firstUsableIP"></ip-detail>
                             <ip-detail :ipValue="this.$store.state.lastUsableIPValue" :ipname="lastUsableIP"></ip-detail>
@@ -16,7 +16,8 @@
                         </div>   
                     </div>
                     <div class="addTablebtn">
-                        <a href="#">Add to table</a>
+                        <button>Add to table</button>
+                        <!-- <a href="#">Add to table</a> -->
                     </div>
                 </div>                
             </div>

@@ -1,101 +1,3 @@
-/* @font-face {
-	font-family: 'HelveticaNeue';
-	src: url('assets/font/HelveticaNeueHeavy.woff2') format('woff2'),
-		url('assets/font/HelveticaNeueHeavy.woff') format('woff');
-	font-weight: 900;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'HelveticaNeue';
-	src: url('assets/font/HelveticaNeueLight.woff2') format('woff2'),
-		url('assets/font/HelveticaNeueLight.woff') format('woff');
-	font-weight: 300;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'HelveticaNeue';
-	src: url('assets/font/HelveticaNeueRegular.woff2') format('woff2'),
-		url('assets/font/HelveticaNeueRegular.woff') format('woff');
-	font-weight: 100;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'HelveticaNeue';
-	src: url('assets/font/HelveticaNeueMedium.woff2') format('woff2'),
-		url('assets/font/HelveticaNeueMedium.woff') format('woff');
-	font-weight: 500;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'HelveticaNeue';
-	src: url('assets/font/HelveticaNeueItalic.woff2') format('woff2'),
-		url('assets/font/HelveticaNeueItalic.woff') format('woff');
-	font-weight: 100;
-	font-style: italic;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'HelveticaNeue';
-	src: url('assets/font/HelveticaNeueMedium.woff2') format('woff2'),
-		url('assets/font/HelveticaNeueMedium.woff') format('woff');
-	font-weight: 500;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'HelveticaNeue';
-	src: url('HelveticaNeueLight.woff2') format('woff2'),
-		url('HelveticaNeueLight.woff') format('woff');
-	font-weight: 300;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'HelveticaNeue';
-	src: url('assets/font/HelveticaNeueBold.woff2') format('woff2'),
-		url('assets/font/HelveticaNeueBold.woff') format('woff');
-	font-weight: bold;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'HelveticaNeue';
-	src: url('assets/font/HelveticaNeueBold.woff2') format('woff2'),
-		url('assets/font/HelveticaNeueBold.woff') format('woff');
-	font-weight: bold;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'HelveticaNeue';
-	src: url('assets/font/HelveticaNeueThin.woff2') format('woff2'),
-		url('assets/font/HelveticaNeueThin.woff') format('woff');
-	font-weight: 100;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'HelveticaNeue';
-	src: url('assets/font/HelveticaNeueBlackCond.woff2') format('woff2'),
-		url('assets/font/HelveticaNeueBlackCond.woff') format('woff');
-	font-weight: 900;
-	font-style: normal;
-	font-display: swap;
-} */
 
 @import url('//fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 h1,
@@ -111,18 +13,18 @@ body {
     font-family: 'Inter', sans-serif;
     transition: background 0.2s linear;
     background-color: #EAECF5 !important;
+    font-size: 16px;  
+    font-weight: normal; color: #000; line-height: normal;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
-.clearfix:before,
-.clearfix:after {
-    visibility: hidden;
-    display: block;
-    font-size: 0;
-    content: " ";
-    clear: both;
-    height: 0;
+input[type=number] {
+    -moz-appearance: textfield;
 }
-
 .headerInfo {
     padding: 30px 0 70px 0;
 }
@@ -148,14 +50,23 @@ body {
 .cidrTxt {
     padding: 40px 0 0 0;
 }
+.cidrTxt a{
+    display: inline-block;
+    color: #9993B3;
+    transition: 1s;
+    text-decoration: none;
+}
+.cidrTxt a:hover{
+    color: #19A8F5;
+    transition: 1s;
+}
 
 .cidrTxt p {
     font-size: 20px;
     line-height: 159.49%;
-    display: flex;
-    align-items: center;
     letter-spacing: 0.05em;
     color: #9993B3;
+
 }
 
 body.dark {
@@ -209,7 +120,7 @@ body.dark .label {
 
 .ball::after {
     content: '';
-    background: url(/assets/images/lighmode.png) center no-repeat;
+    background: url(../img/lighmode.png) center no-repeat;    
     Width: 15.72px;
     Height: 15.67px;
     background-size: 15px;
@@ -221,7 +132,7 @@ body.dark .label {
 }
 
 body.dark .ball::after {
-    background: url(/assets/images/vector.png) center no-repeat;
+    background: url(../img/vector.png) center no-repeat;
 }
 
 .checkbox:checked+.label .ball {
@@ -254,54 +165,47 @@ body.dark .idInfo {
 .idDetails ul li {
     display: inline-block;
     vertical-align: top;
-    margin: 0 60px 0 0;
+    margin: 0 60px 0 0;    
+    position: relative;
+}
+.idDetails ul li:last-child {
+    margin: 0;
+}
+.idDetails ul li input{
+    border: none;
+    line-height: normal;
+    width: 160px;
+    height: 75px;
+    background-color: #F650C8;
     font-weight: 700;
     font-size: 40px;
     line-height: 189.99%;
     color: #fff;
     border-radius: 12px;
-    width: 160px;
-    height: 75px;
-    position: relative;
+    text-align: center;
+    outline: none;
 }
 
-.idDetails ul li:last-child {
-    margin: 0;
-}
 
-.idDetails ul li:after {
-    content: '';
-    background-color: #2F2B43;
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
+.idDetails ul li input.color-2{background: #28B95E;}
+.idDetails ul li input.color-3{background: #F0783C;}
+.idDetails ul li input.color-4{background: #F04B69;}
+.idDetails ul li input.color-5{background: #FFBEBE;color: #2F2B43;}
+
+.idDetails ul li span{
+    font-size: 70px;
+    line-height: 55px;
     position: absolute;
-    bottom: -0px;
-    right: -35px;
-    color: #000;
+    bottom: 0px;
+    right: -38px;    
 }
-
-.idDetails ul li:nth-child(4):after {
-    border-radius: 0;
-    height: 5px;
-    border: 5px solid #2F2B43;
-    transform: rotate(-76.5deg);
-    width: 77.13px;
-    bottom: inherit;
-    top: 33px;
-    right: -71px;
+.idDetails ul li:nth-child(4) span{
+    bottom: 15px;
+    right: -44px;
 }
-
-.idDetails ul li:last-child::after {
-    display: none;
-}
-
-body.dark .idDetails ul li::after {
-    background: #fff;
-}
-
-body.dark .idDetails ul li:nth-child(4):after {
-    border-color: #fff;
+.idDetails ul li input::focus{
+    border: none;
+    outline: none;
 }
 
 .idspc {
@@ -318,36 +222,42 @@ body.dark .idDetails ul li:nth-child(4):after {
     line-height: 40px;
 }
 
-.idList {
+.listidInfo {
     margin: 50px 0 0 0;
 }
+.idList{
+    display: inline-block;
+    vertical-align: top;
+    width: 25%;
+}
 
-.idList ul li p {
+.idList p {
     font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: #9993B3;
-    margin: 0;
-}
-
-body.dark .idList ul li p {
-    color: #9993B3;
-}
-
-.idList ul li span {
     font-weight: 700;
-    font-size: 20px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+  
+    margin: 0;
     color: #2F2B43;
 }
 
-body.dark .idList ul li span {
+body.dark .idList p {
     color: #FCE4D8;
 }
 
-.addTablebtn a {
+.idList span {
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #9993B3;
+}
+
+body.dark .idList span {    
+    color: #9993B3;
+}
+
+.addTablebtn button {
     display: inline-block;
     text-decoration: none;
     padding: 13px 35px;
@@ -366,7 +276,7 @@ body.dark .idList ul li span {
     background-image: radial-gradient(49.55% 440.73% at 60.36% 35.42%, rgba(84, 27, 157, 0.5) 22.92%, rgba(10, 60, 86, 0) 100%);
 }
 
-.addTablebtn a:hover {
+.addTablebtn button:hover {
     color: #fff;
     background-image: none;
 }
