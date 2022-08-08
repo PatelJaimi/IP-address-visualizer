@@ -22,7 +22,7 @@
                                 <td scope="row">{{ index+1 }}</td>
                                 <td>{{ i.subnet }}
                                   <input v-show="false" type="text" :value="i.subnet" :id="`tableId${index}`">
-                                  <img src="../assets/img/tblcopy.png" alt="copy" @click="copyIp(index)" />
+                                  <img src="../assets/img/tblcopy.png" alt="copy" @click="copyIp(index)" title="Copy" />
                                 </td>
                                 <td>{{ i.firstIP }} - {{ i.lastIP }}</td>
                                 <td>{{ i.count }}</td>
@@ -30,8 +30,8 @@
                             </tbody>
                             <!-- data is not available -->
                             <tbody v-else>
-                              <tr colspan="4">
-                                <td>Data Not Found</td>
+                              <tr colspan="4" class="nodata">
+                                <td colspan="4">Data Not Found</td>
                               </tr>
                             </tbody>
                           </table>                    

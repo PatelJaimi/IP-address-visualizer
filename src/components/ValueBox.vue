@@ -8,11 +8,11 @@
                     <span v-if="index < 3">.</span><span v-if="index == 3">/</span>
                 </li>
             </ul>
-            <div class="copyIcon">
+            <div class="copyIcon" @click="copyIp()">
                 <span class="d-sm-none d-inline-block">copy</span>
-                <div class="copyimg" @click="copyIp()">
-                    <img src="../assets/img/copy.png" alt="copy" class="d-sm-inline-block d-none" />
-                    <img src="../assets/img/copy-mobile.png" class="d-sm-none d-inline-block" alt="copy" />
+                <div class="copyimg">
+                    <img src="../assets/img/copy.png" alt="copy" class="d-sm-inline-block d-none" title="Copy" />
+                    <img src="../assets/img/copy-mobile.png" class="d-sm-none d-inline-block" alt="copy" title="Copy" />
                 </div>                                
             </div>
             <input v-show="false" type="text" :value="copiedValue" id="myInput">

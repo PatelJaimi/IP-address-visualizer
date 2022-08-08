@@ -185,13 +185,10 @@ body.dark .idInfo {
     text-align: center;
     outline: none;
 }
-
-
 .idDetails ul li input.color-2{background: #28B95E;}
 .idDetails ul li input.color-3{background: #F0783C;}
 .idDetails ul li input.color-4{background: #F04B69;}
 .idDetails ul li input.color-5{background: #FFBEBE;color: #2F2B43;}
-
 .idDetails ul li span{
     font-size: 70px;
     line-height: 55px;
@@ -207,7 +204,9 @@ body.dark .idInfo {
     border: none;
     outline: none;
 }
-
+body.dark .idDetails ul li span{
+    color: #fff;
+}
 .idspc {
     padding: 40px 75px;
 }
@@ -220,7 +219,9 @@ body.dark .idInfo {
     width: 44px;
     height: 44px;
     line-height: 40px;
+    cursor: pointer;
 }
+
 
 .listidInfo {
     margin: 50px 0 0 0;
@@ -285,8 +286,8 @@ body.dark .idList span {
     border-top: 0.5px solid #9993B3;
 }
 
-body.dark .addTablebtn a {
-    background: #19A8F5;
+body.dark .addTablebtn button {
+    background-color: #19A8F5;
     box-shadow: -18px -18px 36px rgba(255, 255, 255, 0.1), 18px 18px 36px rgba(0, 0, 0, 0.1);
 }
 
@@ -320,7 +321,7 @@ body.dark .tblTitle h2 {
     color: #EFECFF;
 }
 
-.tblTitle a {
+.tblTitle button {
     letter-spacing: 0.05em;
     border: 1px solid #F04B69;
     color: #F04B69;
@@ -330,10 +331,10 @@ body.dark .tblTitle h2 {
     text-transform: uppercase;
     text-decoration: none;
     padding: 12px 16px;
-    border-radius: 10px;
+    border-radius: 10px;background-color: transparent;
 }
 
-.tblTitle a:hover {
+.tblTitle button:hover {
     color: #19A8F5;
     border-color: #19A8F5;
 }
@@ -390,7 +391,7 @@ body.dark .tblnfo td {
 .tblnfo tr:hover {
     background-color: #E9EAF0 !important;
     box-shadow: -6px -6px 12px rgba(255, 255, 255, 0.7), 6px 6px 12px rgba(189, 200, 223, 0.7);
-    color: none;
+    border-radius: 20px;
 }
 
 body.dark .tblnfo tr:hover {
@@ -403,7 +404,13 @@ body.dark .tblnfo tr:hover {
 }
 
 .tblnfo td img {
-    margin-left: 10px;
+    margin-left: 10px;cursor: pointer;
+}
+.nodata td{ 
+    font-size: 22px;color: #2F2B43;
+    font-weight: 600;
+    text-align: center;
+    padding: 30px 0 !important;
 }
 
 .ftrDetails {

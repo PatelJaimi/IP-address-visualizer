@@ -23,3 +23,8 @@ new Vue({
     render: h => h(App),
     store,
 }).$mount('#app')
+
+const checkbox = document.getElementById('checkbox');
+checkbox.addEventListener('change', ()=>{
+document.body.classList.toggle('dark');
+})

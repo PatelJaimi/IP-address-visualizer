@@ -140,7 +140,7 @@
     .tblTitle h2 {
         font-size: 28px;
     }
-    .tblTitle a {
+    .tblTitle button {
         font-size: 18px;
         line-height: normal;
     }
@@ -264,19 +264,21 @@
         content: 'Host Address Range ';
     }
     .tblnfo td:last-child:before {
-        content: 'Net mask';
-    }
-    .tblnfo td:last-child {
-        border-bottom: 1px solid #413E53;
+        content: 'Cost';
     }
     .tblnfo tr {
-        border: none;
+        border-bottom: 1px solid #413E53;
+    }
+    body.dark .tblnfo tr {
+        border-bottom: 1px solid #413E53;
     }
     .tbldetails {
         margin: 25px 0;
     }
-    .tbldetails tr.lstdt td,
-    body.dark .tblnfo tr {
+    .tblnfo table {
+        margin: 0 0 20px 0;
+    }
+    .tbldetails tr.lstdt td,{
         border: none;
     }
     .ftrSocial ul li {
@@ -398,7 +400,7 @@
         line-height: 22px;
     }
     .idDetails ul li:nth-child(4) span {
-        right: -14px;
+        right: -13px;
         bottom: 5px;
     }
     .idList p,
@@ -416,16 +418,21 @@
     .tblTitle h2 {
         font-size: 18px;
     }
-    .tblTitle a {
+    .tblTitle button {
         padding: 8px 10px;
     }
     .tblnfo th,
     .tblnfo td,
-    .tblTitle a {
+    .tblTitle button {
         font-size: 14px;
     }
     .addTablebtn button {
         padding: 8px 15px;
         font-size: 16px;
     }
+    .tblnfo td img {
+        margin-left: 5px;
+    }
+    .copyTxt a, .ftrSocial span {
+        font-size: 16px;}
 }
