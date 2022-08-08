@@ -400,6 +400,18 @@ body.dark .tblnfo tr:last-child {
     border: none;
 }
 
+.darkcopy {
+    display: none;
+}
+
+body.dark .darkcopy {
+    display: inline-block;
+}
+
+body.dark .lightcopy {
+    display: none;
+}
+
 body.dark .tblnfo td {
     color: #9993B3;
 }

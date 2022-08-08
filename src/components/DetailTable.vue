@@ -22,7 +22,8 @@
                                 <td scope="row">{{ index+1 }}</td>
                                 <td>{{ i.subnet }}
                                   <input v-show="false" type="text" :value="i.subnet" :id="`tableId${index}`">
-                                  <img src="../assets/img/tblcopy.png" alt="copy" @click="copyIp(index)" title="Copy" />
+                                  <img src="../assets/img/tblcopy.png" alt="copy" @click="copyIp(index)" title="Copy" class="lightcopy" />
+                                  <img src="../assets/img/tblcopd-dark.png" alt="copy" @click="copyIp(index)" title="Copy" class="darkcopy" />
                                 </td>
                                 <td>{{ i.firstIP }} - {{ i.lastIP }}</td>
                                 <td>{{ i.count }}</td>
