@@ -1,28 +1,31 @@
 <template>
     <div>
+        <!-- header -->
         <about />
         <div>
             <div class="abtIp text-center">
-            <div class="container">
-                <div class="idInfo">
-                    <div class="idspc">
-                        <p class="mb-4">Enter IP address. In the latter case, the provided prefix length overrides the Subnet mask value.</p>
-                        <value-box></value-box>
-                        <div class="listidInfo">
-                            <ip-detail :ipValue="this.$store.state.netmaskValue" :ipname="netmask"></ip-detail>
-                            <ip-detail :ipValue="this.$store.state.firstUsableIPValue" :ipname="firstUsableIP"></ip-detail>
-                            <ip-detail :ipValue="this.$store.state.lastUsableIPValue" :ipname="lastUsableIP"></ip-detail>
-                            <ip-detail :ipValue="this.$store.state.countValue" :ipname="count"></ip-detail>
-                        </div>   
-                    </div>
-                    <div class="addTablebtn">
-                        <button @click="addData()">Add to table</button>
-                    </div>
-                </div>                
+                <div class="container">
+                    <div class="idInfo">
+                        <div class="idspc">
+                            <p class="mb-4">Enter IP address. In the latter case, the provided prefix length overrides the Subnet mask value.</p>
+                            <value-box></value-box>
+                            <div class="listidInfo">
+                                <ip-detail :ipValue="this.$store.state.netmaskValue" :ipname="netmask"></ip-detail>
+                                <ip-detail :ipValue="this.$store.state.countValue" :ipname="count"></ip-detail>
+                                <ip-detail :ipValue="this.$store.state.firstUsableIPValue" :ipname="firstUsableIP"></ip-detail>
+                                <ip-detail :ipValue="this.$store.state.lastUsableIPValue" :ipname="lastUsableIP"></ip-detail>
+                            </div>   
+                        </div>
+                        <div class="addTablebtn">
+                            <button @click="addData()">Add to table</button>
+                        </div>
+                    </div>                
+                </div>
             </div>
         </div>
-        </div>
+        <!-- Subnet Details Table -->
         <detail-table />
+        <!-- footer -->
         <footer-compo />
     </div>
 </template>
@@ -46,9 +49,9 @@ export default{
         return{
             //  ip details
             netmask:'Netmask',
-            firstUsableIP:'First Usable IP',
-            lastUsableIP:'Last Usable IP',
-            count: 'Count',
+            firstUsableIP:'From',
+            lastUsableIP:'To',
+            count: 'Total Count',
         }
     },
     created(){

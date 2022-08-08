@@ -1,6 +1,7 @@
 <template>
     <div>
         <div class="idDetails d-sm-flex d-block justify-content-center align-items-center">
+            <!-- input box -->
             <ul class="list-unstyled m-0">
                 <li v-for="(i,index) in numberValues" :key="index">
                     <input type="number" v-model="numberValues[index]" @input="changeInput($event,index)" :class="`color-${index+1}`" min='0'
@@ -8,6 +9,7 @@
                     <span v-if="index < 3">.</span><span v-if="index == 3">/</span>
                 </li>
             </ul>
+            <!-- copy Button -->
             <div class="copyIcon" @click="copyIp()">
                 <span class="d-sm-none d-inline-block">copy</span>
                 <div class="copyimg">

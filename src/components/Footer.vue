@@ -2,12 +2,14 @@
     <div class="ftrDetails clearfix">
         <div class="container">
             <div class="ftrInfo d-flex justify-content-between align-items-center">
+                <!-- company logo -->
                 <div class="copyTxt">
                     <a href="https://www.zignuts.com/" target="_blank">
                         <p class="d-lg-inline-block d-block me-lg-2 me-0">Proudly made by</p>
                         <img src="../assets/img/footer-logo.png" alt="logo" class="d-inline-block" />
                     </a>
                 </div>
+                <!-- Social Media -->
                 <div class="ftrSocial">
                     <span>Social Media</span>
                     <ul class="list-unstyled m-0">

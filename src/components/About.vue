@@ -1,6 +1,7 @@
 <template>
     <div>
         <div class="headerInfo">
+            <!-- change theme -->
             <div class="hdrtoogle">
                 <div class="container">
                     <div class="position-relative">
@@ -13,6 +14,7 @@
                     </div>
                 </div>
             </div>
+            <!-- header -->
             <div class="container">                
                 <div class="d-lg-flex d-block align-items-baseline mt-md-3">
                     <div class="logo">

@@ -36,14 +36,9 @@ export default new Vuex.Store({
 
             // check for duplicate values 
             for (let i = 0; i < state.subnetDetails.length; i++) {
-                if (state.subnetDetails[i].subnet == obj.subnet) {
-                    if (state.subnetDetails[i].firstIP == obj.firstIP) {
-                        if (state.subnetDetails[i].firstIP == obj.firstIP) {
-                            if (state.subnetDetails[i].firstIP == obj.firstIP) {
-                                match = true
-                            }
-                        }
-                    }
+                if (state.subnetDetails[i].subnet == obj.subnet && state.subnetDetails[i].firstIP == obj.firstIP &&
+                    state.subnetDetails[i].firstIP == obj.firstIP && state.subnetDetails[i].firstIP == obj.firstIP) {
+                    match = true
                 }
             }
             if (match == false) {
@@ -56,12 +51,6 @@ export default new Vuex.Store({
             textValue.select();
             textValue.setSelectionRange(0, 99999);
             navigator.clipboard.writeText(textValue.value);
-        },
-        increment(state) {
-            state.count++
-        },
-        changeDecimalnumber(state, value) {
-            state.decimalnumber1 = value;
         },
         getValue(state) {
             // Detail Value of ip
